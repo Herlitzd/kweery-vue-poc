@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button @click="show = !show">Need Help?</button>
+    <button @click="show = !show">Try Examples</button>
     <span v-if="show">
-      <p>Try:</p>
+      <br />
       <button
         class="link"
         @click="setTo('first_name = \'noah\'')"
@@ -11,9 +11,15 @@
       <br />
       <button
         class="link"
-        @click="setTo('username ~ \'yellow\'')"
+        @click="setTo('username ~ \'purple\'')"
         href="#"
-      >Username contains 'yellow'</button>
+      >Username contains 'purple'</button>
+      <br />
+      <button
+        class="link"
+        @click="setTo('username ~ \'purple\' AND first_name = \'noah\'')"
+        href="#"
+      >Both conditions</button>
     </span>
   </div>
 </template>
@@ -39,7 +45,7 @@ button.link {
   border: none;
   color: blue;
   cursor: pointer;
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 </style>
 
