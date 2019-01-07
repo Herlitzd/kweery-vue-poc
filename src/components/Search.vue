@@ -7,15 +7,17 @@
       :class="{invalid: invalid}"
       class="big"
     />
+    <Help @helpClicked="helpClicked" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
+import Help from "./Help.vue";
 import { Action, State } from "vuex-class";
 
-@Component
+@Component({ components: { Help } })
 export default class Search extends Vue {
   constructor() {
     super();
@@ -27,18 +29,23 @@ export default class Search extends Vue {
   @State("InvalidQuery")
   private invalid!: boolean;
 
+  helpClicked(value: string) {
+    this.query = value;
+    this.filterUsers(this.query);
+  }
   changed(value: any) {
-    debugger;
     this.filterUsers(this.query);
   }
 }
 </script>
 
 
+
 <style>
 .invalid {
   background-color: orange;
 }
+
 .big {
   width: 50vw;
   height: 50px;
