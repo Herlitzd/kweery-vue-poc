@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "kweery": "git@github.com:Herlitzd/kweery.git#v0.2.1",
+    "kweery": "^0.2.2",
     "vue": "^2.5.21",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",

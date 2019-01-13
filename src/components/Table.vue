@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Search />
+    <Search/>
     <table class="table">
       <thead>
         <tr>
@@ -52,7 +52,7 @@ export default class Table extends Vue {
   table{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4em;
+    margin-top: 2em;
   }
 </style>
 
