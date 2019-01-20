@@ -5,19 +5,19 @@
       <br />
       <button
         class="link"
-        @click="setTo('first_name = \'noah\'')"
+        @click="setTo(queries[0])"
         href="#"
-      >First Name is 'noah'</button>
+      >First Name is "noah"</button>
       <br />
       <button
         class="link"
-        @click="setTo('username ~ \'purple\'')"
+        @click="setTo(queries[1])"
         href="#"
-      >Username contains 'purple'</button>
+      >Username contains "purple"</button>
       <br />
       <button
         class="link"
-        @click="setTo('username ~ \'purple\' AND first_name = \'noah\'')"
+        @click="setTo(queries[2])"
         href="#"
       >Both conditions</button>
     </span>
@@ -31,6 +31,12 @@ import { Action, State } from "vuex-class";
 @Component
 export default class Search extends Vue {
   show = false;
+
+  queries = [
+    'first_name = "noah"',
+    'username ~ "purple"',
+    'username ~ "purple" AND first_name = "noah"'
+  ];
   constructor() {
     super();
   }
